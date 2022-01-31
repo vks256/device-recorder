@@ -2,7 +2,7 @@
 - I created the service using AWS API Gateway, which triggers a lambda.
 - The lambda is a Java application and it is created manually in the AWS console, by deploying the jar file.
 - API Gateway is also created manually in the AWS console, with two methods (one POST and one GET).
-- The source code can be found at https://github.com/vks256/device-recorder/tree/main/TempService
+- The source code can be found at https://github.com/vks256/device-recorder
 - PS: Currently, both the APIs return HTTP 200 status, even with the error responses. Please refer to the response payload for the correct status code and message.
 
 
