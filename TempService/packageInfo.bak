@@ -1,0 +1,9 @@
+base = {
+  workspace = vksh_TempService; 
+  versionSet = "TempService/development";
+};
+packages = { 
+  TempServiceCDK-1.0 = .; 
+  TempServiceLambda-1.0 = .;
+};
+platformOverride = AL2_x86_64;

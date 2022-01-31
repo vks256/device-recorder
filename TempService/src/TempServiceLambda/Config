@@ -1,0 +1,62 @@
+# -*-perl-*-
+
+package.TempServiceLambda = {
+    interfaces = (1.0);
+
+    deploy = {
+        generic = true;
+    };
+
+    build-environment = {
+        chroot = basic;
+        network-access = blocked;
+    };
+
+    build-system = brazil-gradle;
+    build-tools = {
+        1.0 = {
+            BrazilGradle = 6.x;
+            BrazilGradleQualityDefaults = 6.x;
+            JDK11 = 1.0;
+            Lombok = 1.16.x;
+        };
+    };
+
+    dependencies = {
+        1.0 = {
+            Jackson-databind = 2.12.x;
+            Maven-com-amazonaws_aws-lambda-java-core = 1.x;
+            Maven-com-amazonaws_aws-lambda-java-log4j2 = 1.2;
+            Maven-org-apache-logging-log4j_log4j-layout-template-json = 2.x;
+        };
+    };
+
+    test-dependencies = {
+        1.0 = {
+            junit = 4.12;
+            JUnit5 = 5.x;
+            Mockito = 3.x;
+        };
+    };
+
+    resolves-conflict-dependencies = {
+        1.0 = {
+            Log4j-core = 2.14.1;
+            Jackson-databind = 2.12.x;
+            Jackson-annotations = 2.12.x;
+            Jackson-core = 2.12.x;
+        };
+    };
+
+    runtime-dependencies = {
+        1.0 = {
+        };
+    };
+
+    # For more information on how to declare targets for HappyTrails packages
+    # see: https://w.amazon.com/?BrazilBuildSystem/HappyTrails/GettingStarted
+    targets = {
+        TempServiceLambda-1.0 = { type = javalibrary; };
+    };
+
+};
