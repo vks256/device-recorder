@@ -3,12 +3,12 @@
 - The lambda is a Java application and it is created manually in the AWS console, by deploying the jar file.
 - API Gateway is also created manually in the AWS console, with two methods (one POST and one GET).
 - The source code can be found at https://github.com/vks256/device-recorder
-- PS: Currently, both the APIs return HTTP 200 status, even with the error responses. Please refer to the response payload for the correct status code and message.
+- PS: There is a limitation with the API responses. Currently, both the APIs return HTTP 200 status, even with the error responses. Please refer to the response payload for the correct status code and message.
 
 
 ### Deployment Instructions
 - The API Gateway and lambda are already deployed to my AWS account.
-- All you need to do is to call the endpoint ""
+- All you need to do is to call the endpoint "https://rxfht8al69.execute-api.us-east-1.amazonaws.com/beta"
 - For the POST API, provide the payload in the JSON format.
 - For the GET API, provide the id as query parameter. e.g. "https://rxfht8al69.execute-api.us-east-1.amazonaws.com/beta/device-readings?id=36d5658a-6908-479e-887e-a949ec199273"
 
